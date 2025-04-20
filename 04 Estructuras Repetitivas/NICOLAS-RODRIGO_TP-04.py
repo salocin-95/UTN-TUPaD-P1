@@ -90,7 +90,7 @@ suma = 0
 while n < 100:
     n += 1
     user_input = int(input("Ingrese un numero: "))
-    suma += user_ineput
+    suma += user_input
 print(f"La media es {suma/n}")
 
 # 10
