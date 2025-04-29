@@ -57,7 +57,10 @@ print(circulo.calcular_perimetro())
 # 6
 string_a = "({[]})"
 string_b = "({[})"
-
+class Pila():
+    
+    def __init__(self):
+        pass
 
 # 7
 class Cola():
@@ -100,4 +103,42 @@ cola.desencolar()
 print(cola.clientes)
 print(cola.mostar_cliente())
 
+# 8
+class Nodo():
+    
+    def __init__(self, dato):
+        self.dato = dato
+        self.siguiente = None
+        
+class ListaEnlazada():
+    
+    def __init__(self):
+        self.cabeza = None
+        
+    def insertar(self, dato):
+        nuevo_nodo = Nodo(dato)
+        nuevo_nodo.siguiente = self.cabeza
+        self.cabeza = nuevo_nodo
+    
+    def mostrar(self):
+        actual = self.cabeza
+        while actual:
+            print(actual.dato, end=" -> ")
+            actual = actual.siguiente
+        print("None")
+        
+    def invertir(self):
+        actual = self.cabeza
+        while actual:
+            print(actual.siguiente, end= " -> " )
+            actual = self.cabeza
+        print("None")
+           
+lista = ListaEnlazada()
+lista.insertar(3)
+lista.insertar(2)
+lista.insertar(1)
+lista.mostrar()
+
 # 9
+lista.invertir()
